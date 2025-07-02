@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kurt Randall S. Oviedo - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: url('vecteezy_abstract-luxury-glowing-lines-curved-overlapping-on-dark_11545805.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f4f4f4;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(18, 18, 18, 0.98);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #00ffe7;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #f4f4f4;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00ffe7;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .section {
+      min-height: 100vh;
+      padding: 6rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Updated Contact Section */
+    #contact.section {
+      min-height: auto;
+      padding: 4rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #00ffe7, #00b3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: #cccccc;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 4px solid #00ffe7;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-container {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .about-box, .experience-box, .contact-box {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 600px;
+      flex: 1;
+      box-shadow: 0 8px 20px rgba(0, 255, 231, 0.2);
+    }
+
+    .about-box h2, .experience-box h2, .contact-box h2 {
+      margin-bottom: 1rem;
+      color: #00ffe7;
+    }
+
+    .btn {
+      background: #00ffe7;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 255, 231, 0.4);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #00c8b4;
+      box-shadow: 0 6px 20px rgba(0, 200, 180, 0.6);
+    }
+
+    .project-boxes {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      width: 450px;
+      height: 280px;
+      border-radius: 25px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 255, 231, 0.25);
+      text-decoration: none;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 40px rgba(0, 255, 231, 0.5);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      background: #121212;
+      padding: 2rem;
+      text-align: center;
+      color: #888;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Kurt Randall S. Oviedo</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="section hero" id="home">
+    <img src="grad.jpg" alt="Kurt Randall S. Oviedo" class="profile-img">
+    <h1>I'm Kurt Randall S. Oviedo</h1>
+    <p>Graphic Designer & Web Developer</p>
+  </section>
+
+  <section class="section" id="about">
+    <div class="about-container">
+      <div class="about-box">
+        <h2>About Me</h2>
+        <p>I’m a creative designer and developer, passionate about crafting digital experiences and bringing ideas to life through clean, effective designs and modern development techniques.</p>
+        <br />
+        <a href="Professional CV Resume (5).pdf" class="btn" download>Download Resume</a>
+      </div>
+      <div class="experience-box">
+        <h2>My Job Experience</h2>
+        <ul style="text-align: left; line-height: 1.6;">
+          <li><strong>Febuary - May 2025  </strong> Information Technology Intern</li>
+          <li><strong>April - December 2024</strong> Graphic Designer</li>
+          <li><strong>July - August 2024</strong>Assistant Book Designer</li>
+          <li><strong>September - December 2024</strong> Plushie Print Designer</li>
+           <li><strong>2020 - 2024</strong> SPES(Special Program for Employment of Students)</li>
+          <li><strong>July - October 2022</strong> Assistant Website Developer</li>
+          <li><strong>2020 -2024</strong> Virtual Assistant </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="project-boxes">
+      <a href="artworks.html" class="project-card" style="background-image: url('artworks/SPIDERMAN.png');">
+        <div class="overlay">Digital Artworks</div>
+      </a>
+      <a href="website.html" class="project-card" style="background-image: url('image/276475359-42722076-97a7-41ae-b742-7a3981b1f2b8.gif');">
+        <div class="overlay">Website Projects</div>
+      </a>
+      <a href="logoposter.html" class="project-card" style="background-image: url('images/Oviedo_Logo.png');">
+        <div class="overlay">Logo / Poster etc.</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="contact-box">
+      <h2>Contact</h2>
+      <p>Let's work together! Reach out to me via email:</p>
+      <p>
+        <a href="mailto:kirutoyoviedo@gmail.com" style="color:#00ffe7; text-decoration: underline;">
+          kirutoyoviedo@gmail.com
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kurt Randall S. Oviedo. All rights reserved.</p>
+  </footer>
+</body>
+</html>
